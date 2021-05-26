@@ -1,3 +1,6 @@
+// Import components
+import { Landing } from '../../components/Landing/Landing'
+
 export const ViewLanding = () => (
-  <h1>Landing</h1>
+  <Landing />
 );
