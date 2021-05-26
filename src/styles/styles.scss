@@ -1,3 +1,9 @@
 // Import bases and settings
 @import "./base/settings";
 @import "./base/base";
+
+// Import components
+@import "./components/header";
+@import "./components/footer";
+@import "./components/landing";
+@import "./components/login";

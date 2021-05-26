@@ -1,0 +1,18 @@
+.footer {
+  background-color: $primary-color;
+  color: white;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    font-size: 1.5rem;
+  }
+}
+
+.footer_title {
+  font-size: 2rem;
+}
