@@ -1,0 +1,10 @@
+type Statistic {
+  country: String
+  date: String
+  deaths: Int
+  confirmed: Int
+}
+
+type Query {
+  Statistics: [Statistic!]!
+}
