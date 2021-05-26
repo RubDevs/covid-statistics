@@ -1,0 +1,23 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - 14
+git:
+  depth: 3
+script:
+  - yarn test
+notifications:
+  slack:
+    secure: "H0Os9pqkX/N+85F1+kkKJfaJmL71/ABXRwAqW+wR9Zt0XhUq6p933Iyb9TYLPm0tQs7lyKwGQUAwykoh5lWlYDZaWzgns94RPBQS7cbNXk3w7T8on8TqGZDHR7RpBwxzcQRVVWYSE0nKVNL6ob8ZSP0NZHZjCmYIp/EU2eTDrHQu1EDnA5qzKpfBhFH7ynBwUyGu4rMuehzN1EHIFsRjddyX31ZkrHdYPgNfUHo561hDSxvkesyBZhLvYYvNnWsAt15P8M7UHj8Q8/2VqXE1HECakxmeKxy+iWrgDZj8WXSuqTFzfGgOHMqhbIUds+4Kocm9PNfeMdCoHFRIMuXhAZYzC04bKBZEyC9y1fui0tuU0sUhduJpklZwCBXXSddobffUAtyaJ8u6MIn6VH8N1WP0/KN9Sa/QQmzhVOIxUMS9cOHG3+vPKFU3PmN/L16O3cVyGs/y9cj+qW6H7kAY7cmYWCySi0CWGJvF+akAI60VJ1iuubkRGjAMDZXN5hMriirbVJcK0NvCFAFwGJPIyS7Y3JWBEfuYIYTD0YE/XqLIuf03a3KM77EzWg2Tjy9EDrajKzk3kAeGFsMHR4f6CpeOovtP646FFxBKm96EnI+r/Gfe+H3x4ek5zi1ntTWXPn/WW9KK5VcJdMqfuxEhT26ftWgryfrT4xE6vNL+WgE="
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  keep_history: true
+  api_key:
+    secure: "I90tgEabGZh/B9XzRMQM7QiTfkn1gU52rPCeqrVijY74ApF7aWUQ3IjQ3d6lqzRdqQAsj+KRG6a1Yu0LjSyl67zReWsTuWxAkMTUu7F7ZxCVwQLSx83uRbBDIoO9/7o2VTm0HRwU8hdnlLqzlfCyMVy8ri5McQdAjC1VTPWH0NNHwcvMoIgiWdO0yYAydBUcUUT2r7SQtIHfl+VUkgwlqv2mFBR6w7L7zTpfLlqLp6tfmNiluHT2LbJ11T84VQv10JN0Lql+tXNbvD5Kf4HFAoep5h/Ihk5+ir93WbXvBeFAsWU1VYTyJ550M/42Z+/wIsp5sNow+eh8aikRsC4RNdANRp7E15ZwpvlzqJuddc0G/J+1R8Fh3XI+Uwvaz61h9W19b6VZGCk2bvH2HmzfVUulj7DhtsU84SfTEmvAeCyWCcV3E1GVkx0dYul3sUnKDgDneS+yxcUa8uhjP9mFjJ+Ryc/fvkyOI6fpVnknr/ojhiVVplNCEfaGGbreoFtMKnFmdsS9wtc6lgcfqN04Fsqa5772puvqzhOzrjqOLqelCPx6dBPyfehMvnoWSGv4upRik+eUXqB2fDopGg9bque/6t9PcFLcFtd6HEBIHCWnujkHBBZgipmQvAvtfH6YQpzx3Zz2FW1D6uZHHHCivWFNTV+wlnH07g+lDAoIA7E="
+  app: master-covid-statistics
+  on:
+    repo: RubDevs/covid-statistics
