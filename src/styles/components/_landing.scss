@@ -64,3 +64,35 @@
     width: 200px;
   }
 }
+
+.search-container {
+  background-color:$blue-color;
+  h2 {
+    color:#E5E5E5;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 48px;
+    margin: auto auto 24px auto;
+    padding: 70px 40px 0px;
+  }
+  p {
+    color:#E5E5E5;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 32px;
+    max-width: 540px;
+    margin: 0px 0px 24px 0px;
+    padding: 0px 40px 0px;
+  }
+  button {
+    background-color:$blue-color;
+    border:solid 1px #E5E5E5;
+    border-radius: 25px;
+    color: #E5E5E5;
+    font-size: 1.8rem;
+    font-weight: 700;
+    height: 40px;
+    margin: 0px 0px 60px 40px;
+    width: 200px;
+  }
+}
