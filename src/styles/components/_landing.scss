@@ -96,3 +96,43 @@
     width: 200px;
   }
 }
+
+/* Media Queries */
+
+@media (min-width: 320px) {
+
+.hero-container{
+  background-color: $primary-color;
+  h1{
+    color:#E5E5E5;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -.025em;
+    /* margin: auto auto 24px; */
+    text-align: center;
+    padding: 70px 30px 10px 37px;
+    max-width: 347px;
+  }
+  p{
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 26px;
+    padding: 10px 12px 10px 25px;
+    max-width: 377px;
+  }
+  button {
+    background-color:$secondary-color;
+    border: none;
+    border-radius: 25px;
+    color:#E5E5E5;
+    font-size: 1.8rem;
+    font-weight: 700;
+    height: 46px;
+    margin-bottom: 33px;
+    width: 293px;
+  }
+ }
+
+}

@@ -1,6 +1,6 @@
 export const Landing = () => (
   <section className="row">
-      <div className="col-sm-12 col-12">
+      <div className="col-12 col-sm-12 col-12">
         <section className="hero-container text-center">
           <h1>Graphs and statistics related to covid</h1>
           <p>Verify data related to covid, occupied beds, recovered and deceased patients in real time.</p>
