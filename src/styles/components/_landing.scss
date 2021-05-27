@@ -112,9 +112,10 @@
     font-weight: 700;
     line-height: 52px;
     letter-spacing: -.025em;
-    text-align: center;
-    padding: 70px 30px 10px 37px;
     max-width: 347px;
+    margin: 0;
+    text-align: center;
+    padding: 71px 30px 10px 37px;
   }
   p{
     color: #FFF;
@@ -133,6 +134,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     height: 46px;
+    margin-top: 10px;
     margin-bottom: 33px;
     width: 293px;
   }
@@ -166,8 +168,44 @@
     font-size: 1.8rem;
     font-weight: 700;
     height: 46px;
-    margin-bottom: 33px;
+    margin-top: 9px;
+    margin-bottom: 5px;
     width: 293px;
   }
  }
+
+.search-container {
+  background-color:$blue-color;
+  h2 {
+    color:#E5E5E5;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 46px;
+    margin: 0;
+    max-width: 371px;
+    padding: 18px 28px 6px 15px;
+  }
+  p {
+    color:#E5E5E5;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 23px;
+    max-width: 387px;
+    margin: 0;
+    padding: 6px 12px 9px 15px;
+  }
+  button{
+    background-color:$blue-color;
+    border:solid 1px #E5E5E5;
+    border-radius: 25px;
+    color: #E5E5E5;
+    font-size: 1.8rem;
+    font-weight: 700;
+    height: 46px;
+    margin-top: 9px;
+    margin-bottom: 5px;
+    width: 293px;
+  }
+ }
+
 }
