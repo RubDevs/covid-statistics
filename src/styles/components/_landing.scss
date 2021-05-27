@@ -1,0 +1,34 @@
+.hero-container {
+  background-color: $primary-color;
+  h1 {
+    color:#E5E5E5;
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -.025em;
+    margin: auto auto 24px;
+    text-align: center;
+    padding-top: 76px;
+    width: 656px;
+  }
+  p {
+    color: #FFF;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 36px;
+    max-width: 540px;
+    margin: auto auto 32px;
+  }
+  button {
+    background-color:$secondary-color;
+    border: none;
+    border-radius: 25px;
+    color:#E5E5E5;
+    font-size: 1.8rem;
+    font-weight: 700;
+    height: 46px;
+    line-height: 24px;
+    margin: auto auto 60px;
+    width: 293px;
+  }
+}
