@@ -1,0 +1,53 @@
+.login {
+  background-color: $blue-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+
+  &__container {
+    width: 340px;
+    background-color: $grey-color;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+  }
+
+  &__title {
+    font-size: 5rem;
+    padding-bottom: 15px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 5px;
+  }
+
+  &__input {
+    background-color: white;
+    height: 30px;
+    padding: 0 15px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 15px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: $primary-color;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
