@@ -14,7 +14,7 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <main className="container">
+        <main>
           <Switch>
             <Route exact path="/" component={ViewLanding}/>
             <Route exact path="/login" component={ViewLogin}/>
