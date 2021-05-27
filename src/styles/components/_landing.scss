@@ -2,6 +2,7 @@
   background-color: $primary-color;
   h1 {
     color:#E5E5E5;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 80px;
@@ -13,6 +14,7 @@
   }
   p {
     color: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 2.4rem;
     font-weight: 300;
     line-height: 36px;
@@ -24,6 +26,7 @@
     border: none;
     border-radius: 25px;
     color:#E5E5E5;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     height: 46px;
@@ -109,7 +112,6 @@
     font-weight: 700;
     line-height: 52px;
     letter-spacing: -.025em;
-    /* margin: auto auto 24px; */
     text-align: center;
     padding: 70px 30px 10px 37px;
     max-width: 347px;
@@ -121,6 +123,7 @@
     line-height: 26px;
     padding: 10px 12px 10px 25px;
     max-width: 377px;
+    margin: 0;
   }
   button {
     background-color:$secondary-color;
@@ -135,4 +138,36 @@
   }
  }
 
+.maps-container{
+  background-color:$blue-color;
+  h2{
+    color:#E5E5E5;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 46px;
+    padding: 18px 28px 6px 15px;
+    margin: 0;
+    max-width: 371px;
+  }
+  p{
+    color:#E5E5E5;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 23px;
+    padding: 6px 12px 9px 15px;
+    max-width: 387px;
+    margin: 0;
+  }
+  button{
+    background-color:$blue-color;
+    border:solid 1px #E5E5E5;
+    border-radius: 25px;
+    color: #E5E5E5;
+    font-size: 1.8rem;
+    font-weight: 700;
+    height: 46px;
+    margin-bottom: 33px;
+    width: 293px;
+  }
+ }
 }
