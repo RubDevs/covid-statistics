@@ -19,6 +19,21 @@ async function handleConnection() {
 
 handleConnection();
 
+async function list(model) {
+  try {
+    const lastDate = await model.max("CreationDate");
+    const data = await model.findAll({
+      where: {
+        CreationDate: lastDate,
+      },
+    });
+    return data;
+  } catch (error) {
+    return error;
+  }
+}
+
 module.exports = {
   sequelize,
+  list,
 };
