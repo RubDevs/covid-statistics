@@ -1,36 +1,24 @@
-const mysql = require("mysql");
+const { Sequelize } = require("sequelize");
+
 const config = require("../config");
+const { db, user, password, host } = config.mysql;
 
-const dbconf = {
-  host: `${config.mysql.host}:${config.mysql.port}`,
-  user: config.mysql.user,
-  password: config.mysql.password,
-  database: config.mysql.db,
-};
+const sequelize = new Sequelize(db, user, password, {
+  host,
+  dialect: "mysql",
+});
 
-//connect
-let connection;
-
-function handleConnection() {
-  connection = mysql.createConnection(dbconf);
-
-  connection.connect((error) => {
-    if (error) {
-      console.error("[db error]", error);
-      setTimeout(handleConnection, 2000);
-    } else {
-      console.log("DB connected");
-    }
-  });
-
-  connection.on("error", (error) => {
-    console.error("[DB error]", error);
-    if (error.code === "PROTOCOL_CONNECTION_LOST") {
-      handleConnection();
-    } else {
-      throw error;
-    }
-  });
+async function handleConnection() {
+  try {
+    await sequelize.authenticate();
+    console.log("DB connected");
+  } catch (error) {
+    console.error("Unable to connect to DB", error);
+  }
 }
 
 handleConnection();
+
+module.exports = {
+  sequelize,
+};
