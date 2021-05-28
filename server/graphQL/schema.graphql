@@ -1,8 +1,8 @@
 type Statistic {
-  country: String
-  date: String
-  deaths: Int
-  confirmed: Int
+  CountryCodeId: String
+  CreationDate: String
+  Deaths: Int
+  Confirmed: Int
 }
 
 type Query {
