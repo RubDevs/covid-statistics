@@ -2,7 +2,10 @@
 import { 
   START_LOGIN, 
   SUCCESS_LOGIN, 
-  ERROR_LOGIN
+  ERROR_LOGIN,
+  SUCCESS_GOOGLE_LOGIN,
+  ERROR_GOOGLE_LOGIN,
+  RESPONSE_FACEBOOK_LOGIN
 } from '../consts';
 
 //Initialize state
@@ -33,6 +36,23 @@ const authReducer = (state = initialState, action) => {
         ...state, 
         errorRequest: true,
         messageError: action.error 
+      };
+    case SUCCESS_GOOGLE_LOGIN:
+      console.log(action.payload);
+      return { 
+        ...state, 
+        successRequest: true
+      };
+    case ERROR_GOOGLE_LOGIN:
+      console.log(action.payload);
+      return { 
+        ...state, 
+        errorRequest: true 
+      };
+    case RESPONSE_FACEBOOK_LOGIN:
+      console.log(action.payload);
+      return { 
+        ...state 
       };
     default:
       return { ...state };
