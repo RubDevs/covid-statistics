@@ -1,4 +1,5 @@
 const User = require("../../models/user");
+const field = "email";
 
 //Dependency injection
 module.exports = function (injectedStore) {
@@ -8,8 +9,13 @@ module.exports = function (injectedStore) {
     return await store.save(User, data);
   }
 
+  async function getUser(email) {
+    return await store.get(User, field, email);
+  }
+
   //Exposed functions
   return {
     save,
+    getUser,
   };
 };
