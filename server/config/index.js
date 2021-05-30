@@ -1,4 +1,8 @@
 module.exports = {
+  dev: process.env.NODE_ENV != "production",
+  jwt: {
+    secret: process.env.JWT_SECRET,
+  },
   mysql: {
     host: process.env.MYSQL_HOST,
     port: process.env.MYSQL_PORT,

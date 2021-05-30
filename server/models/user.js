@@ -5,11 +5,13 @@ const User = sequelize.define("User", {
   //Atributes
   Id: {
     type: DataTypes.UUID,
+    primaryKey: true,
     defaultValue: Sequelize.UUIDV4,
   },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
+    unique: true,
   },
   password: {
     type: DataTypes.STRING,
