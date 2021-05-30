@@ -36,8 +36,23 @@ async function list(model) {
 async function save(model, data) {
   try {
     const entity = await model.create(data);
-    console.log(entity);
     return entity.dataValues;
+  } catch (error) {
+    return Promise.reject(error);
+  }
+}
+
+async function get(model, field, data) {
+  try {
+    const entity = await model.findOne({
+      where: {
+        email: data,
+      },
+    });
+    if (entity) {
+      return entity.dataValues;
+    }
+    return Promise.reject("Validation error");
   } catch (error) {
     return Promise.reject(error);
   }
@@ -47,4 +62,5 @@ module.exports = {
   sequelize,
   list,
   save,
+  get,
 };
