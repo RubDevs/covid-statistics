@@ -108,35 +108,20 @@
 }
 
 .hero-container{
-  background-color: $primary-color;
   h1{
-    color:#E5E5E5;
     font-size: 3.6rem;
-    font-weight: 700;
     line-height: 5.2rem;
-    letter-spacing: -.025em;
     max-width: 100%;
     margin: 0;
-    text-align: center;
     padding: 71px 30px 10px 37px;
   }
   p{
-    color: #FFF;
     font-size: 1.8rem;
-    font-weight: 300;
     line-height: 2.6rem;
     padding: 10px 12px 10px 25px;
-    max-width: 100%;
     margin: 0;
   }
   button {
-    background-color:$secondary-color;
-    border: none;
-    border-radius: 25px;
-    color:#E5E5E5;
-    font-size: 1.8rem;
-    font-weight: 700;
-    height: 46px;
     margin-top: 10px;
     margin-bottom: 33px;
     width: 290px;
@@ -144,35 +129,23 @@
  }
 
 .maps-container{
-  background-color:$blue-color;
   h2{
-    color:#E5E5E5;
     font-size: 3.2rem;
-    font-weight: 700;
     line-height: 4.6rem;
-    padding: 18px 28px 6px 15px;
     margin: 0;
-    max-width: 100%;
+    padding: 18px 28px 6px 15px;
+  
   }
   p{
-    color:#E5E5E5;
     font-size: 1.6rem;
-    font-weight: 300;
     line-height: 2.3rem;
     padding: 6px 12px 9px 15px;
-    max-width: 100%;
     margin: 0;
   }
   .btn-container {
     text-align: center;
   }
   button{
-    background-color:$blue-color;
-    border:solid 1px #E5E5E5;
-    border-radius: 25px;
-    color: #E5E5E5;
-    font-size: 1.8rem;
-    font-weight: 700;
     height: 46px;
     margin: 9px 0px 5px 0px;
     width: 290px;
@@ -180,22 +153,15 @@
  }
 
 .search-container {
-  background-color:$blue-color;
   h2 {
-    color:#E5E5E5;
     font-size: 3.2rem;
-    font-weight: 700;
     line-height: 4.6rem;
     margin: 0;
-    max-width: 100%;
     padding: 18px 28px 6px 15px;
   }
   p {
-    color:#E5E5E5;
     font-size: 1.6rem;
-    font-weight: 300;
     line-height: 2.3rem;
-    max-width: 100%;
     margin: 0;
     padding: 6px 12px 9px 15px;
   }
@@ -203,12 +169,6 @@
     text-align: center;
   }
   button{
-    background-color:$blue-color;
-    border:solid 1px #E5E5E5;
-    border-radius: 25px;
-    color: #E5E5E5;
-    font-size: 1.8rem;
-    font-weight: 700;
     height: 46px;
     margin: 9px 0px 5px 0px;
     width: 290px;
@@ -217,4 +177,68 @@
 }
 
 @media (max-width: 960px) {
+  .col-12 {
+    padding: 0;
+  }
+
+  .hero-container{
+    h1{
+      font-size: 4.6rem;
+      line-height: 6.6rem;
+      max-width: 100%;
+      margin: auto;
+      padding: 71px 30px 10px 37px;
+    }
+    p{
+      font-size: 2.1rem;
+      line-height: 3rem;
+      padding: 10px 12px 10px 25px;
+      margin: auto;
+    }
+    button {
+      margin-top: 10px;
+      margin-bottom: 33px;
+      width: 290px;
+    }
+   }
+
+   .maps-container{
+    h2{
+      font-size: 3.8rem;
+      line-height: 4.6rem;
+      margin: auto;
+      padding: 18px 28px 6px 15px;
+    }
+    p{
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      padding: 6px 12px 9px 15px;
+      margin: 0;
+    }
+    button{
+      height: 46px;
+      margin: 9px 28px 5px 15px;
+      width: 290px;
+    }
+   }
+
+   .search-container {
+    h2 {
+      font-size: 3.8rem;
+      line-height: 4.6rem;
+      margin: 0;
+      padding: 18px 28px 6px 15px;
+    }
+    p {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      margin: 0;
+      padding: 6px 12px 9px 15px;
+    }
+    button{
+      height: 46px;
+      margin: 9px 28px 5px 15px;
+      width: 290px;
+    }
+   }  
 }
