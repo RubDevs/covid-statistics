@@ -52,7 +52,7 @@ async function get(model, field, data) {
     if (entity) {
       return entity.dataValues;
     }
-    return Promise.reject("Validation error");
+    return Promise.reject("Incorrect Username or password");
   } catch (error) {
     return Promise.reject(error);
   }

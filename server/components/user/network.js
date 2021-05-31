@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const boom = require("@hapi/boom");
 
 const config = require("../../config");
 const Controller = require("./index");
@@ -16,32 +17,29 @@ function ApiUsers(app) {
   router.post("/login", validation(userSchema), login);
 
   //Internal middleware
-  async function saveUser(req, res) {
+  async function saveUser(req, res, next) {
     const user = {
       email: req.body.email,
       password: await bcrypt.hash(req.body.password, 10),
     };
-    Controller.save(user)
-      .then((user) => {
-        const { Id, email } = user;
-        const token = jwt.sign({ Id, email }, config.jwt.secret);
-        res.status(201).send({
-          token,
-        });
-      })
-      .catch((error) => {
-        res.status(400).send({ error: error.message });
+    try {
+      const savedUser = Controller.save(user);
+      const { Id, email } = savedUser;
+      const token = jwt.sign({ Id, email }, config.jwt.secret);
+      res.status(201).send({
+        token,
       });
+    } catch (error) {
+      next(boom.internal(error.errors[0].message));
+    }
   }
 
-  async function login(req, res) {
+  async function login(req, res, next) {
     const { email, password } = req.body;
     try {
       const user = await Controller.getUser(email);
       if (!user) {
-        return res.status(400).send({
-          error: "Invalid info",
-        });
+        next(boom.badData("Invalid Username or password"));
       }
       const areEqual = await bcrypt.compare(password, user.password);
       if (areEqual === true) {
@@ -50,11 +48,11 @@ function ApiUsers(app) {
         res.status(200).send({
           token,
         });
+      } else {
+        next(boom.badData("Invalid Username or password"));
       }
     } catch (error) {
-      return res.status(400).send({
-        error,
-      });
+      next(boom.internal(error.errors[0].message));
     }
   }
 }
