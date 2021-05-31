@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
+const cors = require("cors");
 const path = require("path");
 
 const schema = require("./graphQL/schema");
@@ -10,6 +11,7 @@ const apiUsers = require("./components/user/network");
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static("public"));
 app.use(
