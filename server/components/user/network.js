@@ -4,22 +4,19 @@ const jwt = require("jsonwebtoken");
 
 const config = require("../../config");
 const Controller = require("./index");
+const validation = require("../../middleware/validationHandler");
+const { userSchema } = require("../../schema/user");
 
 function ApiUsers(app) {
   const router = express.Router();
 
   app.use("/user", router);
 
-  router.post("/register", saveUser);
-  router.post("/login", login);
+  router.post("/register", validation(userSchema), saveUser);
+  router.post("/login", validation(userSchema), login);
 
   //Internal middleware
   async function saveUser(req, res) {
-    if (!req.body.email || !req.body.password) {
-      res.status(400).send({
-        error: "Bad request",
-      });
-    }
     const user = {
       email: req.body.email,
       password: await bcrypt.hash(req.body.password, 10),
@@ -39,11 +36,6 @@ function ApiUsers(app) {
 
   async function login(req, res) {
     const { email, password } = req.body;
-    if (!email || !password) {
-      return res.status(400).send({
-        error: "Bad request",
-      });
-    }
     try {
       const user = await Controller.getUser(email);
       if (!user) {
