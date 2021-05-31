@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 // Import components
 import { Template } from './Template';
 // Import actions
-import { login } from '../../redux/actions/authActions';
+import { register } from '../../redux/actions/authActions';
 
 export const Component = ({ 
-  login,
+  register,
   successRequest,
   errorRequest,
-  messageError
+  messageError 
 }) => {
   // State
   const [isLoading, setIsLoading] = useState(false);
@@ -19,15 +19,16 @@ export const Component = ({
     type: '',
     show: false
   });
-  const [loginState, setLoginState] = useState({
+  const [registerState, setRegisterState] = useState({
     email: '',
-    password: ''
+    password: '',
+    confirmPassword: ''
   });
 
   // Handler inputs
   const handlerInputs = (element) => {
-    setLoginState({
-      ...loginState,
+    setRegisterState({
+      ...registerState,
       [element.name]: element.value
     })
   }
@@ -51,16 +52,30 @@ export const Component = ({
     }
   }, [errorRequest, messageError])
 
-  // Valid form
   const validForm = (data) => {
-    setIsLoading(true);
-    login(data);
+    if (data.password === data.confirmPassword) {
+      setAlertMessage({
+        message: '',
+        type: 'error',
+        show: false
+      });
+      register(data);
+      setIsLoading(true);
+    } else {
+      setAlertMessage({
+        message: "Passwords don't match",
+        type: 'error',
+        show: true
+      });
+    }
+    console.log(data);
   }
 
+  // Valid form
   return (
     <Template 
-      login={validForm} 
-      state={loginState} 
+      register={validForm} 
+      state={registerState} 
       handlerInputs={handlerInputs}
       isLoading={isLoading}
       alertMessage={alertMessage}
@@ -70,8 +85,8 @@ export const Component = ({
 
 // Map dispatch
 const mapDispatchToProps = dispatch => ({
-  login(data) {
-    dispatch(login({ data }))
+  register(data) {
+    dispatch(register({ data }))
   }
 });
 
@@ -82,4 +97,4 @@ const mapStateToProps = state => ({
   messageError: state.authReducer.messageError
 });
 
-export const Login = connect(mapStateToProps, mapDispatchToProps)(Component);
+export const Register = connect(mapStateToProps, mapDispatchToProps)(Component);

@@ -1,10 +1,12 @@
 // Import libraries
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-// Import private route
+import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
+// Import private and public route
 import { PrivateRoute } from './PrivateRoute';
+import { PublicRoute } from './PublicRoute';
 // Import views
 import { ViewLanding } from './views/Landing/Landing';
 import { ViewLogin } from './views/Login/Login';
+import { ViewRegister } from './views/Register/Register';
 import { ViewStatisticsActiveChart } from './views/Statistics/Active/Chart/Chart';
 import { ViewStatisticsActiveMap } from './views/Statistics/Active/Map/Map';
 import { ViewStatisticsDeathChart } from './views/Statistics/Death/Chart/Chart';
@@ -22,8 +24,9 @@ const App = () => {
         <Header />
         <main>
           <Switch>
-            <Route exact path="/" component={ViewLanding}/>
-            <Route exact path="/login" component={ViewLogin}/>
+            <PublicRoute exact path="/" component={ViewLanding}/>
+            <PublicRoute exact path="/login" component={ViewLogin}/>
+            <PublicRoute exact path="/register" component={ViewRegister}/>
             <PrivateRoute exact path="/statistics/active/chart" component={ViewStatisticsActiveChart}/>
             <PrivateRoute exact path="/statistics/active/map" component={ViewStatisticsActiveMap}/>
             <PrivateRoute exact path="/statistics/death/chart" component={ViewStatisticsDeathChart}/>

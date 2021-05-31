@@ -6,7 +6,7 @@ import GoogleLogo from '../../../../assets/svgs/google.svg';
 // Import actions
 import { successGoogleLogin, errorGoogleLogin } from '../../../../redux/actions/authActions';
 
-const Component = ({ successGoogleLogin, errorGoogleLogin }) => (
+export const Component = ({ successGoogleLogin, errorGoogleLogin }) => (
   <GoogleLogin
     clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
     onSuccess={successGoogleLogin}

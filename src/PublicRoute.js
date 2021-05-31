@@ -8,13 +8,13 @@ export const Component = ({ token, component: Component, ...rest }) => {
     <Route
       {...rest}
       render = {props => {
-        if (token) {
+        if (!token) {
           return <Component {...props} />
         } else {
           return (
             <Redirect 
               to={{
-                pathname: "/login",
+                pathname: "/statistics/active/map",
                 state: {
                   from: props.location
                 }
@@ -32,4 +32,4 @@ const mapStateToProps = state => ({
   token: state.authReducer.token,
 });
 
-export const PrivateRoute = connect(mapStateToProps, null)(Component);
+export const PublicRoute = connect(mapStateToProps, null)(Component);

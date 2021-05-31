@@ -6,7 +6,7 @@ import FacebookLogo from '../../../../assets/svgs/facebook.svg';
 // Import actions
 import { responseFacebookLogin } from '../../../../redux/actions/authActions';
 
-const Component = ({ responseFacebookLogin }) => (
+export const Component = ({ responseFacebookLogin }) => (
   <FacebookLogin
     appId={process.env.REACT_APP_FACEBOOK_CLIENT_ID}
     fields="name,email"

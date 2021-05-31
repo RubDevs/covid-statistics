@@ -1,13 +1,11 @@
 // Import libraries
 import { Link } from 'react-router-dom';
 // Import components
-import { FacebookButton } from '../UI/Button/Facebook/Facebook';
-import { GoogleButton } from '../UI/Button/Google/Google';
 import { Alert } from '../UI/Alert/Alert';
 import { Spinner } from '../UI/Spinner/Spinner';
 
 export const Template = ({
-  login,
+  register,
   state, 
   handlerInputs,
   isLoading,
@@ -15,7 +13,7 @@ export const Template = ({
 }) => (
   <section className="login py-5">
     <section className="login__container">
-      <h1 className="login__title">Login</h1>
+      <h1 className="login__title">Register</h1>
       {alertMessage.show && 
         <Alert message={alertMessage.message} type={alertMessage.type}/>
       }
@@ -45,36 +43,41 @@ export const Template = ({
           onChange={e => handlerInputs(e.target)} 
         />
 
+        <label className="login__label" htmlFor="password">
+          Confirm Password
+        </label>
+        <input 
+          className="login__input" 
+          type="password" 
+          id="confirmPassword"
+          name="confirmPassword"
+          value={state.confirmPassword}
+          onChange={e => handlerInputs(e.target)} 
+        />
+
         <button 
           className="login__button" 
           type="button"
-          onClick={() => login(state)}
-          disabled={!state.password || !state.email}
+          onClick={() => register(state)}
+          disabled={!state.password || !state.email || !state.confirmPassword}
         >
-          {isLoading ? <Spinner /> : 'Login'}
+          {isLoading ? <Spinner /> : 'Register'}
         </button>
 
-        <div className="row">
-          <div className="col-6">
-            <GoogleButton />
-          </div>
-          <div className="col-6">
-            <FacebookButton />
-          </div>
+        <div className="login__divisor">
+          <p className="login__text">Already have an account?</p>
         </div>
+        <Link to="/login">
+          <button
+            className="login__button" 
+            type="button"
+          >
+            Login
+          </button>
+        </Link>
 
       </form>
-      <div className="login__divisor">
-        <p className="login__text">New in Covid Statistics?</p>
-      </div>
-      <Link to="/register">
-        <button
-          className="login__button" 
-          type="button"
-        >
-          Create your account
-        </button>
-      </Link>
+
     </section>
   </section>
 );
