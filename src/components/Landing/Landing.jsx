@@ -19,8 +19,6 @@ export const Landing = () => (
       </section>
     </div>
     <div className="col-sm-12 col-md-12 col-12">
-      <section className="seach-img">
-      </section>
       <section className="search-container">
         <h2>Search</h2>
         <p>Our APIs, SDKs, and live updating map data give developers tools to build better mapping, navigation, and search experiences across platforms.</p>
