@@ -1,21 +1,31 @@
 .header {
-  background-color: $primary-color;
+  background-color: $blue-dark-color;
+  height: 52px;
 }
 
 .header__button {
+  height: 32px;
+  border-radius: 16px;
+  padding: 0 15px;
   font-size: 1.5rem;
+  background-color: white;
+  color: $blue-dark-color;
+  font-weight: bold;
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 
-.header__button:focus {
-  box-shadow: none;
+.header__link {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .header__title {
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.header__title:hover {
-  color: white;
+  font-size: 2.4rem;
+  font-weight: 700;
 }

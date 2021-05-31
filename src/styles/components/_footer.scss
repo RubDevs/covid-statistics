@@ -1,15 +1,16 @@
 .footer {
-  background-color: $primary-color;
-  color: white;
+  background-color: $blue-dark-color;
 }
 
 .footer__list {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
 
   li {
     list-style: none;
-    font-size: 1.5rem;
   }
 }
 

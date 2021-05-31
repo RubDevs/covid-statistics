@@ -17,14 +17,39 @@ h5,
 h6 {
   font-family: "Nanum Gothic", sans-serif;
   margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+p {
+  color: white;
 }
 
 a {
   text-decoration: none;
 }
 
-h1 {
-  color: $primary-color;
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+main {
+  min-height: calc(100vh - 52px - 97px);
+}
+
+@media (max-width: 768px) {
+  main {
+    min-height: calc(100vh - 52px - 210px);
+  }
 }
 
 .container-fluid {
