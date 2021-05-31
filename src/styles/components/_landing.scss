@@ -101,7 +101,7 @@
 
 /* Media Queries */
 
-@media (max-width: 360px) {
+@media (max-width: 500px) {
 
 .col-12 {
   padding: 0;
@@ -113,9 +113,9 @@
     color:#E5E5E5;
     font-size: 3.6rem;
     font-weight: 700;
-    line-height: 52px;
+    line-height: 5.2rem;
     letter-spacing: -.025em;
-    max-width: 347px;
+    max-width: 100%;
     margin: 0;
     text-align: center;
     padding: 71px 30px 10px 37px;
@@ -124,9 +124,9 @@
     color: #FFF;
     font-size: 1.8rem;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 2.6rem;
     padding: 10px 12px 10px 25px;
-    max-width: 377px;
+    max-width: 100%;
     margin: 0;
   }
   button {
@@ -139,7 +139,7 @@
     height: 46px;
     margin-top: 10px;
     margin-bottom: 33px;
-    width: 293px;
+    width: 290px;
   }
  }
 
@@ -149,19 +149,22 @@
     color:#E5E5E5;
     font-size: 3.2rem;
     font-weight: 700;
-    line-height: 46px;
+    line-height: 4.6rem;
     padding: 18px 28px 6px 15px;
     margin: 0;
-    max-width: 371px;
+    max-width: 100%;
   }
   p{
     color:#E5E5E5;
     font-size: 1.6rem;
     font-weight: 300;
-    line-height: 23px;
+    line-height: 2.3rem;
     padding: 6px 12px 9px 15px;
-    max-width: 387px;
+    max-width: 100%;
     margin: 0;
+  }
+  .btn-container {
+    text-align: center;
   }
   button{
     background-color:$blue-color;
@@ -171,9 +174,8 @@
     font-size: 1.8rem;
     font-weight: 700;
     height: 46px;
-    margin-top: 9px;
-    margin-bottom: 5px;
-    width: 293px;
+    margin: 9px 0px 5px 0px;
+    width: 290px;
   }
  }
 
@@ -183,19 +185,22 @@
     color:#E5E5E5;
     font-size: 3.2rem;
     font-weight: 700;
-    line-height: 46px;
+    line-height: 4.6rem;
     margin: 0;
-    max-width: 371px;
+    max-width: 100%;
     padding: 18px 28px 6px 15px;
   }
   p {
     color:#E5E5E5;
     font-size: 1.6rem;
     font-weight: 300;
-    line-height: 23px;
-    max-width: 387px;
+    line-height: 2.3rem;
+    max-width: 100%;
     margin: 0;
     padding: 6px 12px 9px 15px;
+  }
+  .btn-container {
+    text-align: center;
   }
   button{
     background-color:$blue-color;
@@ -205,13 +210,12 @@
     font-size: 1.8rem;
     font-weight: 700;
     height: 46px;
-    margin-top: 9px;
-    margin-bottom: 5px;
-    width: 293px;
+    margin: 9px 0px 5px 0px;
+    width: 290px;
   }
  }
 }
 
-@media (max-width:  480px) {
-  
+@media (max-width: 960px) {
+
 }
