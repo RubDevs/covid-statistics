@@ -14,6 +14,7 @@ const {
   errorHandler,
 } = require("./middleware/errorHandlers");
 const isRequestAjaxOrApi = require("./utils/isRequestAjaxOrApi");
+const auth = require("./middleware/auth");
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static("public"));
 app.use(
   "/graphql",
+  auth,
   graphqlHTTP({ schema, rootValue: resolvers, graphiql: true })
 );
 apiUsers(app);
