@@ -21,5 +21,7 @@ This is the first version of the project, it include all basic project configura
   Create login view and add styles.
 - [COVID-STATISTICS](https://github.com/RubDevs/covid-statistics/issues/23)
   Add login method and create private routes.
+- [COVID-STATISTICS](https://github.com/RubDevs/covid-statistics/issues/38)
+  Landing Page mock up & styling.
 
 ### Back-end

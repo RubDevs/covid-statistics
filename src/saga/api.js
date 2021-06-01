@@ -36,6 +36,12 @@ export default function apiCall(url, method, raw) {
               window.location.reload();
             }
             break;
+          case 422:
+            error = 422;
+            break;
+          case 500:
+            error = 500;
+            break;
           default:
             break;
         }
@@ -44,9 +50,14 @@ export default function apiCall(url, method, raw) {
       .then(res => {
         switch (error) {
           case 400:
-            let message = 'error 400';
-            const error_400 = { message };
+            const error_400 = { message: res.error };
             throw error_400;
+          case 422:
+            const error_422 = { message: res.error };
+            throw error_422;
+          case 500:
+            const error_500 = { message: res.error };
+            throw error_500;
           default:
             return res;
         }

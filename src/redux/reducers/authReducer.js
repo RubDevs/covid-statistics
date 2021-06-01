@@ -31,16 +31,19 @@ const authReducer = (state = initialState, action) => {
         errorRequest: false,
       };
     case SUCCESS_LOGIN:
+      const { token: tokenLogin } = action.result;
+      window.localStorage.setItem('Covid-Statistics-Token', `Bearer ${tokenLogin}`);
       return { 
         ...state, 
         successRequest: true,
+        token: `Bearer ${tokenLogin}`
       };
     case ERROR_LOGIN:
       console.log(action.error);
       return { 
         ...state, 
         errorRequest: true,
-        messageError: action.error 
+        messageError: action.error.message 
       };
     case START_REGISTER:
       return { 
@@ -50,16 +53,19 @@ const authReducer = (state = initialState, action) => {
         errorRequest: false,
       };
     case SUCCESS_REGISTER:
+      const { token: tokenRegister } = action.result;
+      window.localStorage.setItem('Covid-Statistics-Token', `Bearer ${tokenRegister}`);
       return { 
         ...state, 
         successRequest: true,
+        token: `Bearer ${tokenRegister}`
       };
     case ERROR_REGISTER:
       console.log(action.error);
       return { 
         ...state, 
         errorRequest: true,
-        messageError: action.error 
+        messageError: action.error.message  
       };
     case SUCCESS_GOOGLE_LOGIN:
       const { accessToken: accessTokenGoogle  } = action.payload;

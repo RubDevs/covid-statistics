@@ -59,7 +59,10 @@ export const Component = ({
         type: 'error',
         show: false
       });
-      register(data);
+      register({
+        email: data.email,
+        password: data.password
+      });
       setIsLoading(true);
     } else {
       setAlertMessage({
@@ -68,7 +71,6 @@ export const Component = ({
         show: true
       });
     }
-    console.log(data);
   }
 
   // Valid form
