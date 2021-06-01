@@ -6,6 +6,7 @@ const { db, user, password, host } = config.mysql;
 const sequelize = new Sequelize(db, user, password, {
   host,
   dialect: "mysql",
+  logging: false,
 });
 
 async function handleConnection() {
