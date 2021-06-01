@@ -1,9 +1,12 @@
 // Import libraries
 import { Link, useLocation } from 'react-router-dom';
+import { connect } from 'react-redux';
 // Import logo
 import Logo from '../../../assets/svgs/logo.svg';
+// Import actions
+import { logout } from '../../../redux/actions/authActions';
 
-export const Header = () => {
+export const Component = ({ logout, token }) => {
   const location = useLocation();
 
   return (
@@ -13,7 +16,7 @@ export const Header = () => {
           <img src={Logo} alt="Logo" />
         </Link>
         <h2 className="header__title">Covid Statistics</h2>
-        {location.pathname !== '/login' &&
+        {location.pathname === '/' &&
           <nav>
             <Link to="/login">
               <button className="header__button">
@@ -22,7 +25,31 @@ export const Header = () => {
             </Link>
           </nav>
         }
+        {token &&
+          <nav>
+            <button 
+              className="header__button" 
+              onClick={() => logout()}
+            >
+              LogOut
+            </button>
+          </nav>
+        }
       </section>
     </header>
   )
 };
+
+// Map dispatch
+const mapDispatchToProps = dispatch => ({
+  logout() {
+    dispatch(logout())
+  }
+});
+
+// Map state
+const mapStateToProps = state => ({
+  token: state.authReducer.token,
+});
+
+export const Header = connect(mapStateToProps, mapDispatchToProps)(Component);
