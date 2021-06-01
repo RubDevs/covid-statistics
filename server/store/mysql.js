@@ -1,36 +1,66 @@
-const mysql = require("mysql");
+const { Sequelize } = require("sequelize");
+
 const config = require("../config");
+const { db, user, password, host } = config.mysql;
 
-const dbconf = {
-  host: `${config.mysql.host}:${config.mysql.port}`,
-  user: config.mysql.user,
-  password: config.mysql.password,
-  database: config.mysql.db,
-};
+const sequelize = new Sequelize(db, user, password, {
+  host,
+  dialect: "mysql",
+});
 
-//connect
-let connection;
-
-function handleConnection() {
-  connection = mysql.createConnection(dbconf);
-
-  connection.connect((error) => {
-    if (error) {
-      console.error("[db error]", error);
-      setTimeout(handleConnection, 2000);
-    } else {
-      console.log("DB connected");
-    }
-  });
-
-  connection.on("error", (error) => {
-    console.error("[DB error]", error);
-    if (error.code === "PROTOCOL_CONNECTION_LOST") {
-      handleConnection();
-    } else {
-      throw error;
-    }
-  });
+async function handleConnection() {
+  try {
+    await sequelize.authenticate();
+    console.log("DB connected");
+  } catch (error) {
+    console.error("Unable to connect to DB", error);
+  }
 }
 
 handleConnection();
+
+async function list(model) {
+  try {
+    const lastDate = await model.max("CreationDate");
+    const data = await model.findAll({
+      where: {
+        CreationDate: lastDate,
+      },
+    });
+    return data;
+  } catch (error) {
+    return error;
+  }
+}
+
+async function save(model, data) {
+  try {
+    const entity = await model.create(data);
+    return entity.dataValues;
+  } catch (error) {
+    return Promise.reject(error);
+  }
+}
+
+async function get(model, field, data) {
+  try {
+    const entity = await model.findOne({
+      where: {
+        email: data,
+      },
+    });
+    if (entity) {
+      return entity.dataValues;
+    }
+    return Promise.reject("Incorrect Username or password");
+  } catch (error) {
+    return Promise.reject(error);
+  }
+}
+
+module.exports = {
+  sequelize,
+  list,
+  save,
+  get,
+};
