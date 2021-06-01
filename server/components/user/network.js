@@ -23,7 +23,7 @@ function ApiUsers(app) {
       password: await bcrypt.hash(req.body.password, 10),
     };
     try {
-      const savedUser = Controller.save(user);
+      const savedUser = await Controller.save(user);
       const { Id, email } = savedUser;
       const token = jwt.sign({ Id, email }, config.jwt.secret);
       res.status(201).send({
