@@ -1177,6 +1177,109 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fusioncharts/accessibility@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/accessibility/-/accessibility-1.4.0.tgz#e4dff397f68b17e1154af6b0a7a567ee23db4b4d"
+  integrity sha512-6Pvjqc6Y9ahEwQGlDAnLS/iFwEVfgqiwyVI/m9fOlDhOvXOPdW03z9xfbZeL29CqPgNE4QpjL3AyuWUWoKxPIw==
+
+"@fusioncharts/charts@^3.17.0":
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/charts/-/charts-3.17.0.tgz#bb03baf998abfc16518ca66ecad202d218c75130"
+  integrity sha512-19qzUu9pCyqIZgImhwKHACxl9xrEdJGGs7Y7rdcCMPL/sr1jy8rExjG0VYSyYyIwuxz8Lbza3Y3Na0ZgYrPphQ==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/features" "^1.4.0"
+    "@fusioncharts/utils" "^1.4.0"
+
+"@fusioncharts/constructor@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/constructor/-/constructor-1.4.0.tgz#b670b547ddf52832ca0b9b08bc61f711541bfed0"
+  integrity sha512-mX+ehcnI7ecixrPoJfinbAyOJDY3m11joeLiZzquLTu3Hx2U8W0UMt3KUY5OOZVU9bPRbs0pOSAquoCMV3RK1Q==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/maps" "^3.17.0"
+
+"@fusioncharts/core@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/core/-/core-1.4.0.tgz#af48bf707bf1e352b2af2141c8b3760ba8b3756b"
+  integrity sha512-F0/irFmWz0WNa/FN77wBr6JRqc6BE83KG0yKdZO5Guw/4gsVWnkOK4KmVVeNnB6NOv1MIqfspXmm3PcxWQBWpA==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/utils" "^1.4.0"
+    core-js "^3.0.1"
+    ramda "^0.25.0"
+
+"@fusioncharts/datatable@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/datatable/-/datatable-1.4.0.tgz#e0938c3a7bd1ae702b8cde24a0efb1f44b64c22f"
+  integrity sha512-Amkf75UG0NNMAF0syCQtKSBpT1qShp4YAPFj/IwJVZs2i9/oWvuKjdyjtxe/OoLq32oOq9N9pAiTzSsFduMHDQ==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/utils" "^1.4.0"
+
+"@fusioncharts/features@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/features/-/features-1.4.0.tgz#58c9410e4e65f560dd0268478f40af74ecd4e667"
+  integrity sha512-5hF5ZQu+/JQ6l13prg1S6UzZIs3xIbcp5K/zruMvtb9IqtW0QAfC5xIeVRbe743oNiLGkk8jaAQpGDci4qNATg==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/utils" "^1.4.0"
+
+"@fusioncharts/fusiontime@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/fusiontime/-/fusiontime-2.5.0.tgz#2c5947a0ec597a3cb9c5a586f346d3be7721ee72"
+  integrity sha512-gsS0vpP5RC9mnwoSOk8O2pLOJ5wnwO/ADYgfCs2p4eK6AeWkvJE/CeIhhSXYSlTeDnIisSAaWjl0Fn20cK3zfw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/charts" "^3.17.0"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/datatable" "^1.4.0"
+    "@fusioncharts/utils" "^1.4.0"
+    ramda "^0.25.0"
+
+"@fusioncharts/maps@^3.17.0":
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/maps/-/maps-3.17.0.tgz#e6e251ffdf6611c104624037f36cb3863a25adf0"
+  integrity sha512-j/DYLAqp6hcYS7e40YcBQlALG3Jxl2f7PBc+qOiotoPGzfpfdJccuHMA+153TZhfDm3643NqqOgYBJepjBC3cA==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/charts" "^3.17.0"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/features" "^1.4.0"
+
+"@fusioncharts/powercharts@^3.17.0":
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/powercharts/-/powercharts-3.17.0.tgz#35685435209d322f3ba3199375af96691dcad932"
+  integrity sha512-bHw3p6b/yw2joJgcHMhGisM67aAFhosANFkQt7r+N8zK1bQGy+7nqo8dB5y60SAq9xEluNjHtXDbeyXhXHLH7g==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/charts" "^3.17.0"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/utils" "^1.4.0"
+
+"@fusioncharts/utils@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/utils/-/utils-1.4.0.tgz#b54e446e49cc469ffed48445b6693343db6e3b68"
+  integrity sha512-oMJfQu4nZfucyouZngRu7iPdx1j9noqSSiP1REPcpQSC/uX84eJfYY4wbNNr9q1BMm8u5r53JTGVq51w3NJnIQ==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    ramda "^0.25.0"
+
+"@fusioncharts/widgets@^3.17.0":
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/widgets/-/widgets-3.17.0.tgz#0fb8d169c8f258cd49f4597fe91f7ad9fe2f2241"
+  integrity sha512-bOu/i3npNeWNqMHQRyMw8Zp+4q2YK1opOeuG9dy44tXgAySLdjewx9P9Yzo3UKtAGQlRwjaVrXMff1BDuisPzw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/charts" "^3.17.0"
+    "@fusioncharts/constructor" "^1.4.0"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/features" "^1.4.0"
+    "@fusioncharts/utils" "^1.4.0"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"
@@ -2450,6 +2553,18 @@ anymatch@^3.0.3, anymatch@~3.1.1:
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
+
+apexcharts@^3.26.3:
+  version "3.26.3"
+  resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.26.3.tgz#9cf25eb4dd9daedf94f566e5513fcea08de46e2b"
+  integrity sha512-zbP7RBBV2CGffoVMIuTCUG64YbEUzV8IIT7iNVLMtY/OAVXTjPksDxSqKIniTvgJoscKe6sx4P56qDpBSU19VA==
+  dependencies:
+    svg.draggable.js "^2.2.2"
+    svg.easing.js "^2.0.0"
+    svg.filter.js "^2.0.2"
+    svg.pathmorphing.js "^0.1.3"
+    svg.resize.js "^1.4.3"
+    svg.select.js "^3.0.1"
 
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
@@ -3740,6 +3855,11 @@ core-js@^2.4.0:
   version "2.6.12"
   resolved "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+
+core-js@^3.0.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.13.1.tgz#30303fabd53638892062d8b4e802cac7599e9fb7"
+  integrity sha512-JqveUc4igkqwStL2RTRn/EPFGBOfEZHxJl/8ej1mXJR75V3go2mFF4bmUYkEIT1rveHKnkUlcJX/c+f1TyIovQ==
 
 core-js@^3.6.5:
   version "3.9.0"
@@ -5472,6 +5592,26 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
+
+fusioncharts@^3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/fusioncharts/-/fusioncharts-3.17.0.tgz#8750eb309115815b80b0910900dee97bb69a79bf"
+  integrity sha512-jW6pcT82gpCAj7gUBKrQb7+FDHaOybbagORmiSymgGZpH1aVyM0QfWlAsLj5McujBC2KbGph17Ms+1FfBYsHLg==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@fusioncharts/accessibility" "^1.4.0"
+    "@fusioncharts/charts" "^3.17.0"
+    "@fusioncharts/constructor" "^1.4.0"
+    "@fusioncharts/core" "^1.4.0"
+    "@fusioncharts/datatable" "^1.4.0"
+    "@fusioncharts/features" "^1.4.0"
+    "@fusioncharts/fusiontime" "^2.5.0"
+    "@fusioncharts/maps" "^3.17.0"
+    "@fusioncharts/powercharts" "^3.17.0"
+    "@fusioncharts/utils" "^1.4.0"
+    "@fusioncharts/widgets" "^3.17.0"
+    mutationobserver-shim "^0.3.5"
+    promise-polyfill "^8.1.3"
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -7901,6 +8041,11 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
+mutationobserver-shim@^0.3.5:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/mutationobserver-shim/-/mutationobserver-shim-0.3.7.tgz#8bf633b0c0b0291a1107255ed32c13088a8c5bf3"
+  integrity sha512-oRIDTyZQU96nAiz2AQyngwx1e89iApl2hN5AOYwyxLUB47UYsU3Wv9lJWqH5y/QdiYkc5HQLi23ZNB3fELdHcQ==
+
 mysql2@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-2.2.5.tgz#72624ffb4816f80f96b9c97fedd8c00935f9f340"
@@ -9501,6 +9646,11 @@ promise-inflight@^1.0.1:
   resolved "https://registry.npmjs.org/promise-inflight/-/promise-inflight-1.0.1.tgz"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
+promise-polyfill@^8.1.3:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-8.2.0.tgz#367394726da7561457aba2133c9ceefbd6267da0"
+  integrity sha512-k/TC0mIcPVF6yHhUvwAp7cvL6I2fFV7TzF1DuGPI8mBh4QQazf36xCKEHKTZKRysEoTQoQdKyP25J8MPJp7j5g==
+
 promise@^8.1.0:
   version "8.1.0"
   resolved "https://registry.npmjs.org/promise/-/promise-8.1.0.tgz"
@@ -9516,7 +9666,7 @@ prompts@2.4.0, prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.7, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -9655,6 +9805,11 @@ raf@^3.4.1:
   dependencies:
     performance-now "^2.1.0"
 
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
+  integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz"
@@ -9694,6 +9849,13 @@ raw-body@^2.4.1:
     http-errors "1.7.3"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-apexcharts@^1.3.9:
+  version "1.3.9"
+  resolved "https://registry.yarnpkg.com/react-apexcharts/-/react-apexcharts-1.3.9.tgz#d97e53fd513dc6ff73b90c2364c3bdd88d8dad01"
+  integrity sha512-KPonT5uQPHOHSVgTNEzpB0HhCkZtoicQYGjR9P+3DRDSgTsC+DM2vDUfo/B2Fn1m+wdgVeDXWL0VJYDc6JD/tw==
+  dependencies:
+    prop-types "^15.5.7"
 
 react-app-polyfill@^2.0.0:
   version "2.0.0"
@@ -9755,6 +9917,13 @@ react-facebook-login@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/react-facebook-login/-/react-facebook-login-4.1.1.tgz#005121236a6ac0dee02099976fb1a3265f9d633e"
   integrity sha512-COnHEHlYGTKipz4963safFAK9PaNTcCiXfPXMS/yxo8El+/AJL5ye8kMJf23lKSSGGPgqFQuInskIHVqGqTvSw==
+
+react-fusioncharts@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-fusioncharts/-/react-fusioncharts-3.1.2.tgz#add3f23e1ca819f1d6f9b58547cfcb85b50c6972"
+  integrity sha512-ilmR7gfUJL5yed0soSHKlBpq2qCPyWiSc7gyFlT2vbPQS8eN6fAWMmLHy8H2kFP/XELItoAMqgUXyrjgK82bXA==
+  dependencies:
+    uuid "^3.2.1"
 
 react-google-login@^5.2.2:
   version "5.2.2"
@@ -11308,6 +11477,61 @@ svg-parser@^2.0.2:
   resolved "https://registry.npmjs.org/svg-parser/-/svg-parser-2.0.4.tgz"
   integrity sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==
 
+svg.draggable.js@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/svg.draggable.js/-/svg.draggable.js-2.2.2.tgz#c514a2f1405efb6f0263e7958f5b68fce50603ba"
+  integrity sha512-JzNHBc2fLQMzYCZ90KZHN2ohXL0BQJGQimK1kGk6AvSeibuKcIdDX9Kr0dT9+UJ5O8nYA0RB839Lhvk4CY4MZw==
+  dependencies:
+    svg.js "^2.0.1"
+
+svg.easing.js@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/svg.easing.js/-/svg.easing.js-2.0.0.tgz#8aa9946b0a8e27857a5c40a10eba4091e5691f12"
+  integrity sha1-iqmUawqOJ4V6XEChDrpAkeVpHxI=
+  dependencies:
+    svg.js ">=2.3.x"
+
+svg.filter.js@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/svg.filter.js/-/svg.filter.js-2.0.2.tgz#91008e151389dd9230779fcbe6e2c9a362d1c203"
+  integrity sha1-kQCOFROJ3ZIwd5/L5uLJo2LRwgM=
+  dependencies:
+    svg.js "^2.2.5"
+
+svg.js@>=2.3.x, svg.js@^2.0.1, svg.js@^2.2.5, svg.js@^2.4.0, svg.js@^2.6.5:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/svg.js/-/svg.js-2.7.1.tgz#eb977ed4737001eab859949b4a398ee1bb79948d"
+  integrity sha512-ycbxpizEQktk3FYvn/8BH+6/EuWXg7ZpQREJvgacqn46gIddG24tNNe4Son6omdXCnSOaApnpZw6MPCBA1dODA==
+
+svg.pathmorphing.js@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/svg.pathmorphing.js/-/svg.pathmorphing.js-0.1.3.tgz#c25718a1cc7c36e852ecabc380e758ac09bb2b65"
+  integrity sha512-49HWI9X4XQR/JG1qXkSDV8xViuTLIWm/B/7YuQELV5KMOPtXjiwH4XPJvr/ghEDibmLQ9Oc22dpWpG0vUDDNww==
+  dependencies:
+    svg.js "^2.4.0"
+
+svg.resize.js@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/svg.resize.js/-/svg.resize.js-1.4.3.tgz#885abd248e0cd205b36b973c4b578b9a36f23332"
+  integrity sha512-9k5sXJuPKp+mVzXNvxz7U0uC9oVMQrrf7cFsETznzUDDm0x8+77dtZkWdMfRlmbkEEYvUn9btKuZ3n41oNA+uw==
+  dependencies:
+    svg.js "^2.6.5"
+    svg.select.js "^2.1.2"
+
+svg.select.js@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/svg.select.js/-/svg.select.js-2.1.2.tgz#e41ce13b1acff43a7441f9f8be87a2319c87be73"
+  integrity sha512-tH6ABEyJsAOVAhwcCjF8mw4crjXSI1aa7j2VQR8ZuJ37H2MBUbyeqYr5nEO7sSN3cy9AR9DUwNg0t/962HlDbQ==
+  dependencies:
+    svg.js "^2.2.5"
+
+svg.select.js@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/svg.select.js/-/svg.select.js-3.0.1.tgz#a4198e359f3825739226415f82176a90ea5cc917"
+  integrity sha512-h5IS/hKkuVCbKSieR9uQCj9w+zLHoPh+ce19bBYyqF53g6mnPB8sAtIbe1s9dh2S2fCmYX2xel1Ln3PJBbK4kw==
+  dependencies:
+    svg.js "^2.6.5"
+
 svgo@^1.0.0, svgo@^1.2.2:
   version "1.3.2"
   resolved "https://registry.npmjs.org/svgo/-/svgo-1.3.2.tgz"
@@ -11913,7 +12137,7 @@ utils-merge@1.0.1:
   resolved "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.3.2, uuid@^3.4.0:
+uuid@^3.2.1, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
