@@ -1,5 +1,40 @@
+// Import libraries
+import ReactFC from 'react-fusioncharts';
+import FusionCharts from 'fusioncharts';
+import Maps from 'fusioncharts/fusioncharts.maps';
+import World from 'fusionmaps/maps/fusioncharts.worldwithcountries';
+import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+// Import components
+import { Spinner } from '../../../UI/Spinner/Spinner';
+import { LastDeathCovidData } from '../../../../graphql/querys/LastDeathCovidData';
+// Import data
+import { dataSource } from './data';
+// Resolves charts dependancy
+ReactFC.fcRoot(FusionCharts, Maps, World, FusionTheme);
+
+export const Component = ({ loading, error, data }) => {
+  console.log(data);
+  return (
+    <section className="py-5">
+      {loading ?
+        <div className="d-flex w-100 justify-content-center">
+          <Spinner size={50} />
+        </div>
+        :
+        <ReactFC
+          type="maps/worldwithcountries" 
+          width="100%" 
+          height="600"
+          dataFormat="json"
+          dataSource={dataSource(data)}
+        />
+    }
+    </section>
+  )
+};
+
 export const StatisticsDeathMap = () => (
-  <section className="py-5">
-    <h1>Statistics Death Map</h1>
-  </section>
-);
+  <LastDeathCovidData>
+    {Component}
+  </LastDeathCovidData>
+)
