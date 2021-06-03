@@ -21,26 +21,5 @@ export const dataSource = (data) => ({
       }
     ]
   },
-  data: [
-    {
-      id: 'BR',
-      value: 4520
-    },
-    {
-      id: '25',
-      value: 6520
-    },
-    {
-      id: '16',
-      value: 3520
-    },
-    {
-      id: '18',
-      value: 7520
-    },
-    {
-      id: '26',
-      value: 1520
-    },
-  ]
+  data
 });
