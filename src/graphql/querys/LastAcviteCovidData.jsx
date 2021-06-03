@@ -1,6 +1,8 @@
 // Import libraries
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
+// Import get country code
+import { getCountryId } from '../../helper/getCountryId';
 
 export const LastActiveCovidData = ({ children }) => (
   <Query
@@ -16,7 +18,7 @@ export const LastActiveCovidData = ({ children }) => (
     {({ loading, error, data }) => {
       if (data) {
         const statistics = data.Statistics.map(country => ({
-          id: country.CountryCodeId,
+          id: getCountryId(country.CountryCodeId),
           value: country.Confirmed
         }))
         return children({ loading, error, data: statistics })
