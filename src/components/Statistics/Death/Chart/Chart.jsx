@@ -7,6 +7,24 @@ const options = {
   },
   xaxis: {
     categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+  },
+  theme :{
+    palette: 'palette4'
+  },
+  title: {
+    text: "Covid-19 Deaths Projections",
+    align: 'center',
+    margin: 10,
+    floating: false,
+    style: {
+      fontSize:  '18px',
+      fontWeight:  'bold',
+      fontFamily: "Noto Sans JP",
+      color: '#033a75',
+    },
+  },
+  stroke: {
+    curve: 'smooth',
   }
 }
 
@@ -18,18 +36,16 @@ const series = [
 ]
 
 export const StatisticsDeathChart = () => (
-  <section className="py-5">
-    <div className="app">
-        <div className="row">
-          <div className="mixed-chart">
-            <Chart
-              options={options}
-              series={series}
-              type="line"
-              width="500"
-            />
-          </div>
-        </div>
+  <div className="container-fluid">
+    <section className="row">
+      <div className="col-9">
+        <Chart
+          options={options}
+          series={series}
+          type="line"
+          width="700"
+        />
       </div>
-  </section>
+    </section>
+  </div>
 );
