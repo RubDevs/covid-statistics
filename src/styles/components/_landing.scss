@@ -1,3 +1,7 @@
+.row {
+  --bs-gutter-x: 0;
+}
+
 .hero-container {
   background-color: $primary-color;
   h1 {
@@ -103,10 +107,6 @@
 
 @media (max-width: 500px) {
 
-.col-12 {
-  padding: 0;
-}
-
 .hero-container{
   h1{
     font-size: 3.6rem;
@@ -177,10 +177,6 @@
 }
 
 @media (max-width: 960px) {
-  .col-12 {
-    padding: 0;
-  }
-
   .hero-container{
     h1{
       font-size: 4.6rem;
