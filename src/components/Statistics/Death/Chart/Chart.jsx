@@ -25,7 +25,7 @@ export const StatisticsDeathChart = () => (
             <Chart
               options={options}
               series={series}
-              type="bar"
+              type="line"
               width="500"
             />
           </div>
