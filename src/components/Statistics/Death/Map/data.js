@@ -16,7 +16,7 @@ export const dataSource = (data) => ({
     gradient: "1",
     color: [
       {
-        maxvalue: "50000000",
+        maxvalue: "6500000",
         code: "#36469F"
       }
     ]
