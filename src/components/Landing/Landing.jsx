@@ -7,7 +7,9 @@ export const Landing = () => (
         <section className="hero-container text-center">
           <h1>Graphs and statistics related to covid</h1>
           <p>Verify data related to covid, occupied beds, recovered and deceased patients in real time.</p>
-          <button>Start looking</button>
+          <Link to="/login">
+            <button>Start looking</button>
+          </Link>
         </section>
       </div>
       <div className="col-12">
