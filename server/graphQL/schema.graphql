@@ -5,6 +5,16 @@ type Statistic {
   Confirmed: Int
 }
 
+type CountriesRatio {
+  CreationDate: String
+  Name: String
+  Deaths: Int
+  TotalPopulation: Int
+  Ratio_per_100_000: Float
+  Total_Ratio: Float
+}
+
 type Query {
   Statistics: [Statistic!]!
+  Ratios: [CountriesRatio!]!
 }

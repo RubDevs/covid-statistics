@@ -8,5 +8,9 @@ module.exports = function (injectedStore) {
       const statistics = await store.list(Statistics);
       return statistics;
     },
+    Ratios: async () => {
+      const ratios = await store.ratios();
+      return ratios;
+    },
   };
 };
