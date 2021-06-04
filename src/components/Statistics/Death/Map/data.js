@@ -1,6 +1,6 @@
 export const dataSource = (data) => ({
   chart: {
-    caption: "Death cases of Covid-19",
+    caption: "Ratio of deaths per 100.000 of Covid-19",
     captionalignment: "center",
     theme: "fusion",
     formatnumberscale: "0",

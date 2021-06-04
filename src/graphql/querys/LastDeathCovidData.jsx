@@ -8,20 +8,21 @@ export const LastDeathCovidData = ({ children }) => (
   <Query
     query={gql`
       {
-        Statistics {
-          CountryCodeId
-          Deaths
+        Ratios {
+          Name
+          Ratio_per_100_000
+          Total_Ratio
         }
       }
     `}
   >
     {({ loading, error, data }) => {
       if (data) {
-        const statistics = data.Statistics.map(country => ({
+        const ratios = data.Ratios.map(country => ({
           id: getCountryId(country.CountryCodeId),
-          value: country.Deaths
+          value: country.Ratio_per_100_000
         }))
-        return children({ loading, error, data: statistics })
+        return children({ loading, error, data: ratios })
       } else {
         return children({ loading, error, data: [] })
       }
