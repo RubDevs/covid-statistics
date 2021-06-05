@@ -14,6 +14,7 @@ import { ViewStatisticsDeathMap } from './views/Statistics/Death/Map/Map';
 // Import components
 import { Header} from './components/UI/Header/Header';
 import { Footer } from './components/UI/Footer/Footer';
+import { Menu } from './components/Menu/Menu';
 // Import styles
 import './styles/styles.scss';
 
@@ -23,6 +24,7 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <main>
+          <Menu />
           <Switch>
             <PublicRoute exact path="/" component={ViewLanding}/>
             <PublicRoute exact path="/login" component={ViewLogin}/>
