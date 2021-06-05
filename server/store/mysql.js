@@ -62,7 +62,8 @@ async function get(model, field, data) {
 async function ratios() {
   try {
     const [results, metadata] = await sequelize.query(`SELECT 
-    c.CreationDate,
+      c.CreationDate,
+      c.CountryCodeId "Code",
       cn.Name,
       c.Deaths,
       p.TotalPopulation, 
