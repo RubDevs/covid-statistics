@@ -1,8 +1,6 @@
-const expect = require("chai").expect;
 const userApi = require("../components/user/network");
 const testServer = require("../utils/testServer");
 const assert = require("assert");
-const userMock = require("../mocks/userMock");
 
 describe("POST /user/register", () => {
   const request = testServer(userApi);
