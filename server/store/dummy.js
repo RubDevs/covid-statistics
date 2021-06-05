@@ -1,4 +1,3 @@
-const config = require("../config");
 const userMock = require("../mocks/userMock");
 
 async function list(model) {

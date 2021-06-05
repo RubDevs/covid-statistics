@@ -1,7 +1,7 @@
 const config = require("../../config");
 let User;
 if (!config.dev) {
-  const User = require("../../models/user");
+  User = require("../../models/user");
 }
 
 const field = "email";
