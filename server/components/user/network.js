@@ -25,7 +25,7 @@ function ApiUsers(app) {
     try {
       const savedUser = await Controller.save(user);
       const { Id, email } = savedUser;
-      const token = jwt.sign({ Id, email }, config.jwt.secret);
+      const token = jwt.sign({ Id, email }, config.jwt.secret || "testingOnly");
       res.status(201).send({
         token,
       });
@@ -44,7 +44,10 @@ function ApiUsers(app) {
       const areEqual = await bcrypt.compare(password, user.password);
       if (areEqual === true) {
         const { Id, email } = user;
-        const token = jwt.sign({ Id, email }, config.jwt.secret);
+        const token = jwt.sign(
+          { Id, email },
+          config.jwt.secret || "testingOnly"
+        );
         res.status(200).send({
           token,
         });
