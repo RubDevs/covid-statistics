@@ -7,6 +7,7 @@ type Statistic {
 
 type CountriesRatio {
   CreationDate: String
+  Code: String
   Name: String
   Deaths: Int
   TotalPopulation: Int
