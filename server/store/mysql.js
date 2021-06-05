@@ -59,9 +59,29 @@ async function get(model, field, data) {
   }
 }
 
+async function ratios() {
+  try {
+    const [results, metadata] = await sequelize.query(`SELECT 
+      c.CreationDate,
+      c.CountryCodeId "Code",
+      cn.Name,
+      c.Deaths,
+      p.TotalPopulation, 
+      c.Deaths /100000 'Ratio_per_100_000',
+      ROUND((c.Deaths / p.TotalPopulation) * 100, 5) 'Total_Ratio'
+      from covid c JOIN countriesnames cn on c.CountryCodeId = cn.CountryCodeId
+      JOIN population p on c.CountryCodeId = p.CountryCodeId
+      where (c.CountryCodeId, c.CreationDate) in (select CountryCodeId , max(CreationDate) from covid group by CountryCodeId)`);
+    return results;
+  } catch (error) {
+    return Promise.reject(error);
+  }
+}
+
 module.exports = {
   sequelize,
   list,
   save,
   get,
+  ratios,
 };

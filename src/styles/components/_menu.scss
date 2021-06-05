@@ -1,0 +1,13 @@
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+
+  &__select {
+    border-radius: 15px;
+    font-size: 1.5rem;
+    padding-left: 15px;
+  }
+}
