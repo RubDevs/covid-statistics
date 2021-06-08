@@ -1,35 +1,58 @@
-import React from 'react'
-import Chart from 'react-apexcharts'
+// Import libraries
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+// Import components
+import { Spinner } from '../../../UI/Spinner/Spinner';
+import { Template } from './Template';
+import { CountriesSelect } from './CountriesSelect';
+import { DaysSelect } from './DaysSelect';
+// Import actions
+import { getDeathPredictions } from '../../../../redux/actions/predictionsActions';
 
-const options = {
-  chart: {
-    id: "basic-bar"
-  },
-  xaxis: {
-    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-  }
-}
+export const Component = ({ 
+  getDeathPredictions,
+  loadingDeathData 
+}) => {
+  // State
+  const [country, setCountry] = useState('Colombia');
+  const [day, setDay] = useState('90');
 
-const series = [
-  {
-    name: "series-1",
-    data: [30, 40, 45, 50, 49, 60, 70, 91]
-  }
-]
+  // Get statistics
+  useEffect(() => {
+    getDeathPredictions(country, day);
+  }, [getDeathPredictions, country, day])
 
-export const StatisticsDeathChart = () => (
-  <section className="py-5">
-    <div className="app">
-        <div className="row">
-          <div className="mixed-chart">
-            <Chart
-              options={options}
-              series={series}
-              type="bar"
-              width="500"
-            />
-          </div>
+  return (
+    <section className="py-5 container">
+      <div className="row">
+        <div className="col-md-9 px-3">
+          {loadingDeathData ? 
+            <div className="w-100 d-flex justify-content-center">
+              <Spinner size={50} /> 
+            </div>
+            :
+            <Template />
+          }
+        </div>
+        <div className="col-md-3">
+          <CountriesSelect country={country} setCountry={setCountry}/>
+          <DaysSelect day={day} setDay={setDay} />
         </div>
       </div>
-  </section>
-);
+    </section>
+  )
+};
+
+// Map dispatch
+const mapDispatchToProps = dispatch => ({
+  getDeathPredictions(countryName, days) {
+    dispatch(getDeathPredictions({ countryName, days }))
+  }
+});
+
+// Map state
+const mapStateToProps = state => ({
+  loadingDeathData: state.predictionsReducer.loadingDeathData
+});
+
+export const StatisticsDeathChart = connect(mapStateToProps, mapDispatchToProps)(Component);

@@ -39,6 +39,14 @@
   }
 }
 
+.image__container {
+  background-color:$blue-color;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  height: 100%;
+}
+
 .maps-container {
   background-color:$blue-color;
   h2 {
