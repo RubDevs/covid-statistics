@@ -25,3 +25,22 @@ This is the first version of the project, it include all basic project configura
   Landing Page mock up & styling.
 
 ### Back-end
+
+## [2.0] - 2021-06-07
+
+### Front-end
+
+This is the second version of the project, it include map and line charts to show the Covid-19 statistics.
+
+#### Added
+
+- [COVID-STATISTICS](https://github.com/RubDevs/covid-statistics/issues/51)
+  Add realtime chart with graphql api.
+- [COVID-STATISTICS](https://github.com/RubDevs/covid-statistics/issues/54)
+  Add get country id helper.
+- [COVID-STATISTICS](https://github.com/RubDevs/covid-statistics/issues/60)
+  Add menu component.
+- [COVID-STATISTICS](https://github.com/RubDevs/covid-statistics/issues/68)
+  Add projection chart.
+
+### Back-end

@@ -1,84 +1,60 @@
-import React from 'react'
-import Chart from 'react-apexcharts'
+// Import libraries
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+// Import components
+import { Spinner } from '../../../UI/Spinner/Spinner';
+import { Template } from './Template';
+import { CountriesSelect } from './CountriesSelect';
+import { DaysSelect } from './DaysSelect';
+// Import actions
+import { getDeathPredictions } from '../../../../redux/actions/predictionsActions';
 
-const options = {
-  chart: {
-    id: "basic-bar",
-    toolbar: {
-      show: true,
-      offsetX: 5,
-      offsetY: 2,
-      tools: {
-        download: true,
-        selection: true,
-        zoom: true,
-        zoomin: true,
-        zoomout: true,
-        reset: true | '<img src="/static/icons/reset.png" width="20">',
-      }
-    }
-  },
-  xaxis: {
-    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-  },
-  theme: {
-    palette: 'palette4'
-  },
-  title: {
-    text: "Covid-19 Deaths Projections",
-    align: 'center',
-    margin: 10,
-    floating: false,
-    style: {
-      fontSize: '14px',
-      fontFamily: "Nanum Gothic",
-      color: '#033a75',
-    },
-  },
-  stroke: {
-    curve: 'smooth',
-    width: 2,
-  },
-  responsive: [{
-    breakpoint: 500,
-    options: {
-      chart: {
-        toolbar: {
-          show: true,
-          tools: {
-            download: false,
-            selection: false,
-            zoom: false,
-            zoomin: true,
-            zoomout: false,
-            pan: false,
-            reset: true | '<img src="/static/icons/reset.png" width="20">',
+export const Component = ({ 
+  getDeathPredictions,
+  loadingDeathData 
+}) => {
+  // State
+  const [country, setCountry] = useState('Colombia');
+  const [day, setDay] = useState('90');
+
+  // Get statistics
+  useEffect(() => {
+    getDeathPredictions(country, day);
+  }, [getDeathPredictions, country, day])
+
+);
+
+  return (
+    <section className="py-5 container">
+      <div className="row">
+        <div className="col-md-9 px-3">
+          {loadingDeathData ? 
+            <div className="w-100 d-flex justify-content-center">
+              <Spinner size={50} /> 
+            </div>
+            :
+            <Template />
           }
-        },
-        width: '290'
-      },
-    }
-  }]
-}
-
-const series = [
-  {
-    name: "series-1",
-    data: [30, 40, 45, 50, 49, 60, 70, 91]
-  }
-]
-
-export const StatisticsDeathChart = () => (
-  <div className="container-fluid">
-    <section className="row">
-      <div className="col-10 col-xl-6">
-        <Chart
-          options={options}
-          series={series}
-          type="line"
-          width="640"
-        />
+        </div>
+        <div className="col-md-3">
+          <CountriesSelect country={country} setCountry={setCountry}/>
+          <DaysSelect day={day} setDay={setDay} />
+        </div>
       </div>
     </section>
-  </div>
-);
+  )
+};
+
+// Map dispatch
+const mapDispatchToProps = dispatch => ({
+  getDeathPredictions(countryName, days) {
+    dispatch(getDeathPredictions({ countryName, days }))
+  }
+});
+
+// Map state
+const mapStateToProps = state => ({
+  loadingDeathData: state.predictionsReducer.loadingDeathData
+});
+
+export const StatisticsDeathChart = connect(mapStateToProps, mapDispatchToProps)(Component);

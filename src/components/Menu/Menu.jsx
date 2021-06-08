@@ -29,10 +29,9 @@ export const Component = ({ token }) => {
         onChange={({ target }) => changePath(target.value)}
       >
         <option value="/statistics/active/map">Active cases</option>
-        <option value="/statistics/active/chart">Active cases projection</option>
         <option value="/statistics/death/map">Death cases</option>
-        <option value="/statistics/death/chart">Death cases projection</option>
         <option value="/statistics/death/ratio">Death ratio cases</option>
+        <option value="/statistics/death/chart">Death cases projection</option>
       </select>
     </section>
   )

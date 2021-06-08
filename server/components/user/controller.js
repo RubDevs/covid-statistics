@@ -1,4 +1,9 @@
-const User = require("../../models/user");
+const config = require("../../config");
+let User;
+if (!config.dev) {
+  User = require("../../models/user");
+}
+
 const field = "email";
 
 //Dependency injection
