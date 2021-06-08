@@ -22,6 +22,8 @@ export const Component = ({
     getDeathPredictions(country, day);
   }, [getDeathPredictions, country, day])
 
+);
+
   return (
     <section className="py-5 container">
       <div className="row">

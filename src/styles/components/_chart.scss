@@ -1,0 +1,15 @@
+.col-10 {
+  margin: 35px auto 0 auto;
+}
+
+@media (max-width: 500px) {
+  .col-10 {
+    margin: 25px auto 5px auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .col-10 {
+    margin: 20px auto 10px auto;
+  }
+}
