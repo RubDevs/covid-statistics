@@ -19,7 +19,7 @@ export const RatiosCovidData = ({ children }) => (
       if (data) {
         const ratios = data.Ratios.map(country => ({
           id: getCountryId(country.CountryCodeId),
-          value: country.Deaths
+          value: country.Ratio_per_100_000
         }))
         return children({ loading, error, data: ratios })
       } else {
