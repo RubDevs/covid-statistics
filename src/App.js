@@ -11,6 +11,7 @@ import { ViewStatisticsActiveChart } from './views/Statistics/Active/Chart/Chart
 import { ViewStatisticsActiveMap } from './views/Statistics/Active/Map/Map';
 import { ViewStatisticsDeathChart } from './views/Statistics/Death/Chart/Chart';
 import { ViewStatisticsDeathMap } from './views/Statistics/Death/Map/Map';
+import { ViewStatisticsRatioMap } from './views/Statistics/Death/Ratio/Map'
 // Import components
 import { Header} from './components/UI/Header/Header';
 import { Footer } from './components/UI/Footer/Footer';
@@ -33,6 +34,7 @@ const App = () => {
             <PrivateRoute exact path="/statistics/active/map" component={ViewStatisticsActiveMap}/>
             <PrivateRoute exact path="/statistics/death/chart" component={ViewStatisticsDeathChart}/>
             <PrivateRoute exact path="/statistics/death/map" component={ViewStatisticsDeathMap}/>
+            <PrivateRoute exact path="/statistics/death/ratio" component={ViewStatisticsRatioMap} />
             <Redirect to="/" />
           </Switch>
         </main>
