@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Preview Image
 
-
+![image](https://user-images.githubusercontent.com/55466321/121119446-3a9f0080-c7e1-11eb-9ad6-61cb2f7d82c6.png)
 
 ## Libraries used
 
@@ -118,8 +118,11 @@ Joshua Pedraza and Luis Novelo
 ## Author
 
 William Santiago Alzate - William Santiago Alzate [C7] - Frontend
+
 Sebastian Ballen - Sebastian Ballen [C7] - Frontend
+
 Ruben Hernandez - Ruben Hernandez [C7] - Backend
+
 Diego Duarte - Diego Duarte [C7] - Data Scientist
 
 ## Available Scripts
