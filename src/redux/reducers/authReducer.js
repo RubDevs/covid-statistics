@@ -68,12 +68,12 @@ const authReducer = (state = initialState, action) => {
         messageError: action.error.message  
       };
     case SUCCESS_GOOGLE_LOGIN:
-      const { accessToken: accessTokenGoogle  } = action.payload;
-      window.localStorage.setItem('Covid-Statistics-Token', accessTokenGoogle);
+      const { tokenId: tokenIdGoogle  } = action.payload;
+      window.localStorage.setItem('Covid-Statistics-Token', tokenIdGoogle);
       return { 
         ...state, 
         successRequest: true,
-        token: accessTokenGoogle
+        token: tokenIdGoogle
       };
     case ERROR_GOOGLE_LOGIN:
       return { 
