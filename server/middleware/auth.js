@@ -17,11 +17,12 @@ async function middleware(req, res, next) {
     return next(boom.unauthorized("Invalid token format"));
   }
 
-  jwt.verify(token, config.jwt.secret, (error, decoded) => {
-    if (!error) {
+  try {
+    const decoded = await jwt.verify(token, config.jwt.secret);
+    if (decoded) {
       return next();
     }
-  });
+  } catch (error) {}
 
   //verify if is google oauth token
   const isGoogleToken = await validateGoogle(token);
