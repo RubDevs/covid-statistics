@@ -22,6 +22,7 @@
     "express-graphql": "^0.12.0",
     "fusioncharts": "^3.17.0",
     "fusionmaps": "^3.17.0",
+    "google-auth-library": "^7.1.1",
     "graphql": "^15.5.0",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
