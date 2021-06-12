@@ -69,7 +69,7 @@ const authReducer = (state = initialState, action) => {
       };
     case SUCCESS_GOOGLE_LOGIN:
       const { tokenId: tokenIdGoogle  } = action.payload;
-      window.localStorage.setItem('Covid-Statistics-Token', tokenIdGoogle);
+      window.localStorage.setItem('Covid-Statistics-Token', `Bearer ${tokenIdGoogle}`);
       return { 
         ...state, 
         successRequest: true,

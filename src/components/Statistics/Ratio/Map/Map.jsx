@@ -12,7 +12,6 @@ import { dataSource } from './data';
 ReactFC.fcRoot(FusionCharts, Maps, World, FusionTheme);
 
 export const Component = ({ loading, error, data }) => {
-  console.log(data);
   return (
     <section className="py-5">
       {loading ?

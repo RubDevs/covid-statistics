@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.1.10",
     "apexcharts": "^3.26.3",
     "apollo-boost": "^0.4.9",
+    "apollo-link-error": "^1.1.13",
     "bcrypt": "^5.0.1",
     "bootstrap": "^5.0.1",
     "cors": "^2.8.5",
