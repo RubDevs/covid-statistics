@@ -9,7 +9,7 @@ export const Component = ({ deathData }) => (
         id: "basic-line"
       },
       xaxis: {
-        categories: deathData.map(d => d.CreationDate.slice(0, 10)),
+        categories: deathData.map(d => d.index.slice(0, 10)),
         labels: {
           show: false
         },

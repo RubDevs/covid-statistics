@@ -14,7 +14,7 @@ export const Component = ({
   loadingDeathData 
 }) => {
   // State
-  const [country, setCountry] = useState('Colombia');
+  const [country, setCountry] = useState('Mexico');
   const [day, setDay] = useState('90');
 
   // Get statistics

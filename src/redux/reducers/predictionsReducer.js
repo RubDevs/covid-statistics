@@ -25,7 +25,6 @@ const predictionsReducer = (state = initialState, action) => {
       };
     case SUCCESS_GET_DEATH_PREDICTIONS:
       const { data } = JSON.parse(action.result);
-      console.log(data);
       return { 
         ...state, 
         loadingDeathData: false,
