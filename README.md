@@ -1,6 +1,6 @@
 # covid-statistics
 
-This is a jigsaw game website for the fourth project of the mastery stage in Platzi Master, where you can upload a image and then solve the jigsaw generated moving the pieces.
+This is a website where you can find a few statistics about covid-19, there are nice maps and charts, you can log in to the application with your Facebook or Google account.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
